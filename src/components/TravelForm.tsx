@@ -38,7 +38,7 @@ const TravelForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [webhookUrl, setWebhookUrl] = useState('https://adarshmiriyal.app.n8n.cloud/webhook-test/travel-planner');
+  const webhookUrl = 'https://adarshmiriyal.app.n8n.cloud/webhook-test/travel-planner';
 
   const handleInputChange = (field: keyof FormData, value: string | Date | undefined) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -46,15 +46,6 @@ const TravelForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!webhookUrl) {
-      toast({
-        title: "Webhook URL Required",
-        description: "Please enter your n8n webhook URL to submit the form.",
-        variant: "destructive",
-      });
-      return;
-    }
 
     setIsSubmitting(true);
 
@@ -131,21 +122,6 @@ const TravelForm = () => {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-8">
-        {/* Webhook URL Input */}
-        <div className="mb-8 p-6 glass rounded-2xl">
-          <label className="block text-sm font-medium mb-3 text-accent">
-            n8n Webhook URL (Required)
-          </label>
-          <Input
-            type="url"
-            value={webhookUrl}
-            onChange={(e) => setWebhookUrl(e.target.value)}
-            placeholder="https://your-n8n-instance.com/webhook/your-webhook-id"
-            className="input-glow bg-background/50 border-glass-border text-foreground placeholder:text-muted-foreground"
-            required
-          />
-        </div>
-
         {/* Personal Information */}
         <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-2">
