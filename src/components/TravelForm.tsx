@@ -71,31 +71,34 @@ const TravelForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        mode: 'no-cors',
         body: JSON.stringify(payload),
       });
 
-      setShowSuccess(true);
-      setTimeout(() => {
-        setShowSuccess(false);
-        setFormData({
-          name: '',
-          email: '',
-          from: '',
-          to: '',
-          date: undefined,
-          duration: '',
-          budget: '',
-          transport: '',
-          people: '',
-          style: ''
-        });
-      }, 3000);
+      if (response.ok) {
+        setShowSuccess(true);
+        setTimeout(() => {
+          setShowSuccess(false);
+          setFormData({
+            name: '',
+            email: '',
+            from: '',
+            to: '',
+            date: undefined,
+            duration: '',
+            budget: '',
+            transport: '',
+            people: '',
+            style: ''
+          });
+        }, 3000);
 
-      toast({
-        title: "Journey Planned Successfully! ✈️",
-        description: "Your travel details have been sent. We'll help you create the perfect journey!",
-      });
+        toast({
+          title: "Journey Planned Successfully! ✈️",
+          description: "Your travel details have been sent. We'll help you create the perfect journey!",
+        });
+      } else {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
     } catch (error) {
       console.error('Form submission error:', error);
