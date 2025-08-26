@@ -38,7 +38,7 @@ const TravelForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const webhookUrl = 'https://adarshmiriyal.app.n8n.cloud/webhook-test/travel-planner';
+  const webhookUrl = 'https://adarshmiriyal.app.n8n.cloud/webhook/travel-planner';
 
   const handleInputChange = (field: keyof FormData, value: string | Date | undefined) => {
     setFormData(prev => ({ ...prev, [field]: value }));
