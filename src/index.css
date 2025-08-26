@@ -67,10 +67,40 @@
   }
 
   .dark {
-    /* Dark mode uses the same futuristic theme */
+    /* Dark mode - Deep space theme */
     --background: 240 15% 6%;
     --background-secondary: 245 20% 8%;
     --foreground: 240 5% 95%;
+    --glass-bg: 240 15% 12%;
+    --card: 240 15% 10%;
+  }
+
+  .light {
+    /* Light mode - Clean modern theme */
+    --background: 0 0% 100%;
+    --background-secondary: 210 40% 98%;
+    --foreground: 240 10% 3.9%;
+    --glass-bg: 255 255% 255%;
+    --glass-border: 214.3 31.8% 91.4%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 260 100% 65%;
+    --primary-glow: 270 100% 75%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 200 100% 60%;
+    --accent-glow: 195 100% 70%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 260 100% 65%;
   }
 }
 
@@ -214,5 +244,132 @@
 
   .reveal.active {
     @apply opacity-100 translate-y-0;
+  }
+
+  /* Advanced Hover Effects */
+  .magnetic {
+    transition: transform 0.2s ease-out;
+  }
+
+  .magnetic:hover {
+    transform: translate3d(0, -8px, 0);
+  }
+
+  /* Tilt Effect */
+  .tilt-effect {
+    transition: transform 0.3s ease-out;
+    transform-style: preserve-3d;
+  }
+
+  .tilt-effect:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale3d(1.02, 1.02, 1.02);
+  }
+
+  /* Neon Text Effect */
+  .neon-text {
+    text-shadow: 
+      0 0 5px hsl(var(--primary)),
+      0 0 10px hsl(var(--primary)),
+      0 0 15px hsl(var(--primary)),
+      0 0 20px hsl(var(--primary)),
+      0 0 35px hsl(var(--primary)),
+      0 0 40px hsl(var(--primary));
+    animation: neon-flicker 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon-flicker {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px hsl(var(--primary)),
+        0 0 10px hsl(var(--primary)),
+        0 0 15px hsl(var(--primary)),
+        0 0 20px hsl(var(--primary)),
+        0 0 35px hsl(var(--primary)),
+        0 0 40px hsl(var(--primary));
+    }
+    50% {
+      text-shadow: 
+        0 0 2px hsl(var(--primary)),
+        0 0 5px hsl(var(--primary)),
+        0 0 8px hsl(var(--primary)),
+        0 0 12px hsl(var(--primary)),
+        0 0 22px hsl(var(--primary)),
+        0 0 25px hsl(var(--primary));
+    }
+  }
+
+  /* Morphing Background */
+  .morphing-bg {
+    background: linear-gradient(-45deg, 
+      hsl(var(--primary) / 0.1), 
+      hsl(var(--accent) / 0.1), 
+      hsl(var(--primary-glow) / 0.1), 
+      hsl(var(--accent-glow) / 0.1)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Liquid Hover Effect */
+  .liquid-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .liquid-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
+    transition: left 0.5s;
+  }
+
+  .liquid-hover:hover::before {
+    left: 100%;
+  }
+
+  /* Breathing Animation */
+  .breathing {
+    animation: breathing 4s ease-in-out infinite;
+  }
+
+  @keyframes breathing {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* 3D Card Effect */
+  .card-3d {
+    perspective: 1000px;
+  }
+
+  .card-3d-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .card-3d:hover .card-3d-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-3d-front,
+  .card-3d-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-3d-back {
+    transform: rotateY(180deg);
   }
 }
