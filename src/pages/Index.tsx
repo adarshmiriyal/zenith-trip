@@ -85,7 +85,7 @@ const Index = () => {
         {/* Form Section */}
         <section id="form" className="container mx-auto px-6 py-20">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gradient mb-4">Start Your Journey</h2>
+            <h2 className="text-4xl font-bold text-black mb-4">Start Your Journey</h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               Tell us about your dream trip and we'll create a personalized itinerary just for you
             </p>
