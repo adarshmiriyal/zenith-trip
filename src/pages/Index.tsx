@@ -52,7 +52,7 @@ const Index = () => {
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-20 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient pulse-glow">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black">
               Plan Your Perfect
               <br />
               Journey ✈️
