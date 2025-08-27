@@ -39,7 +39,7 @@ const Index = () => {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-primary to-accent flex items-center justify-center btn-glow">
                 <Plane className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gradient">AI Travel planner</span>
+              <span className="text-xl font-bold text-black">AI TRAVEL PLANNER</span>
             </div>
             <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
               <a href="#features" className="text-foreground/80 hover:text-foreground transition-colors">Features</a>
@@ -99,7 +99,7 @@ const Index = () => {
         {/* Features Section */}
         <section id="features" className="container mx-auto px-6 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gradient mb-4">Why Choose AI Travel planner?</h2>
+            <h2 className="text-4xl font-bold text-black mb-4">Why Choose AI TRAVEL PLANNER?</h2>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               Experience the future of travel planning with our cutting-edge platform
             </p>
@@ -133,7 +133,7 @@ const Index = () => {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary to-accent flex items-center justify-center">
               <Plane className="w-4 h-4 text-white" />
             </div>
-            <span className="text-lg font-bold text-gradient">AI Travel planner</span>
+            <span className="text-lg font-bold text-black">AI TRAVEL PLANNER</span>
           </div>
           <p className="text-muted-foreground">
             Built with ❤️ for modern travelers. Start your next adventure today.
