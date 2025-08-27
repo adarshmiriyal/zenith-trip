@@ -114,8 +114,7 @@ const Index = () => {
             ].map((feature, index) => (
               <div 
                 key={index}
-                className="glass rounded-2xl p-6 text-center group hover:scale-105 transition-all duration-300 floating"
-                style={{ animationDelay: `${index * 0.5}s` }}
+                className="glass rounded-2xl p-6 text-center group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent mx-auto mb-4 flex items-center justify-center btn-glow">
                   <feature.icon className="w-8 h-8 text-white" />
