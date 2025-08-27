@@ -9,17 +9,17 @@
     /* Core Background Colors */
     --background: 240 15% 6%;
     --background-secondary: 245 20% 8%;
-    --foreground: 240 5% 95%;
+    --foreground: 0 0% 100%;
 
     /* Glass & Card Effects */
     --glass-bg: 240 15% 12%;
     --glass-border: 240 25% 20%;
     --card: 240 15% 10%;
-    --card-foreground: 240 5% 95%;
+    --card-foreground: 0 0% 100%;
 
     /* Interactive Elements */
     --popover: 240 15% 12%;
-    --popover-foreground: 240 5% 95%;
+    --popover-foreground: 0 0% 100%;
 
     /* Brand Purple-Blue Gradient System */
     --primary: 260 100% 65%;
@@ -27,7 +27,7 @@
     --primary-foreground: 240 5% 10%;
 
     --secondary: 245 15% 15%;
-    --secondary-foreground: 240 5% 95%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Electric Blue Accents */
     --accent: 200 100% 60%;
@@ -36,10 +36,10 @@
 
     /* UI States */
     --muted: 245 15% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted-foreground: 0 0% 85%;
 
     --destructive: 0 75% 60%;
-    --destructive-foreground: 240 5% 95%;
+    --destructive-foreground: 0 0% 100%;
 
     /* Interactive Borders */
     --border: 240 25% 20%;
@@ -70,7 +70,7 @@
     /* Dark mode uses the same futuristic theme */
     --background: 240 15% 6%;
     --background-secondary: 245 20% 8%;
-    --foreground: 240 5% 95%;
+    --foreground: 0 0% 100%;
   }
 }
 
